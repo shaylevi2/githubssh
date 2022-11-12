@@ -50,7 +50,7 @@ if [ ! -f /etc/ssh_banner.txt ]; then
     echo '* Click on "Raw" (on the top) and then use the "?token=" value of the current URL' >> /etc/ssh_banner.txt
     echo '**********************************' >> /etc/ssh_banner.txt
 
-    systemctl restart sshd
+    systemctl restart sshd || systemctl restart ssh
 
     echo "Github SSH Access Control Configured"
 fi
