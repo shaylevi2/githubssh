@@ -17,13 +17,13 @@ if [ ! -f /etc/ssh_banner.txt ]; then
 
     ## Use Pre-Built
     if [ -d '/lib64/security' ]; then
-        curl -L -s -o /lib64/security/pam_oauth2.so https://github.com/shaylevi2/test/raw/main/pam_oauth2.so
+        curl -L -s -o /lib64/security/pam_oauth2.so https://github.com/shaylevi2/githubssh/raw/main/pam_oauth2.so
         chmod 644 /lib64/security/pam_oauth2.so
     elif [ -d '/lib/security' ]; then
-        curl -L -s -o /lib/security/pam_oauth2.so https://github.com/shaylevi2/test/raw/main/pam_oauth2.so
+        curl -L -s -o /lib/security/pam_oauth2.so https://github.com/shaylevi2/githubssh/raw/main/pam_oauth2.so
         chmod 644 /lib/security/pam_oauth2.so
     elif [ -d '/lib/x86_64-linux-gnu/security' ]; then
-        curl -L -s -o /lib/x86_64-linux-gnu/security/pam_oauth2.so https://github.com/shaylevi2/test/raw/main/pam_oauth2.so
+        curl -L -s -o /lib/x86_64-linux-gnu/security/pam_oauth2.so https://github.com/shaylevi2/githubssh/raw/main/pam_oauth2.so
         chmod 644 /lib/x86_64-linux-gnu/security/pam_oauth2.so
     else
         echo "Failed to find /lib/security" >&2
