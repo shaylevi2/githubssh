@@ -1,5 +1,5 @@
 # Enabling SSH Access Control Using Github Repo Permissions (No Key File!)
-The technique described in the article is using some undocumented capabilities, everything is provided without any warranty, use with caution and at your own risk.
+The described technique is using some undocumented capabilities, everything is provided without any warranty, use with caution and at your own risk.
 
 ### Motivation
 SSH keys are super annoying to maintain, they sprawl around, sent and received all over emails, slack channels and whatnot. It would be great if SSH access could be managed in a better way.
