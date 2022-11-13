@@ -33,7 +33,7 @@ Basically, when you click "Raw" on a private repo file on Github, you'll be redi
 
 Why Github? Github repo access is granular and can be easily gated with any SSO provider and Github are rather trusted in securely handling sensitive access tokens.
 
-So the complete flow is pam-oauth2 SSH module performing curl "https&#8203;://raw.githubusercontent.com/[REPO]/main/access.json?token=[PASSWORD]" expecting to get a JSON response that has a key-value of the username used. This will only work if the password provided is a valid access token.
+So the complete flow is pam-oauth2 SSH module performing curl "raw.githubusercontent.com/[REPO]/main/access.json?token=[PASSWORD]" expecting to get a JSON response that has a key-value of the username used. This will only work if the password provided is a valid access token.
 
 You can see the code here: [tinyurl.com/githubsshinit](https://tinyurl.com/githubsshinit), or on this repo: [shaylevi2/githubssh](https://github.com/shaylevi2/githubssh).
 
