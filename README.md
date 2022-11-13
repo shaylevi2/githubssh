@@ -16,7 +16,7 @@ Following the instructions in the banner, which you'll only be able to complete 
 ```sh
 curl -L -s https://tinyurl.com/githubsshinit | sed 's/\r//' | sudo sh -s - <user> <repo>
 
-(example: curl -L -s https://tinyurl.com/githubsshinit | sed 's/\r//' | sudo sh -s - root shaylevi2/ssh)
+# example: curl -L -s https://tinyurl.com/githubsshinit | sed 's/\r//' | sudo sh -s - root shaylevi2/ssh
 ```
 
 2. On the repo used for access control you'll need a file called "access.json" with the following content: `{"root":"root"}`
