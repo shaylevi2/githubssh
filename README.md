@@ -1,4 +1,4 @@
-# Enabling SSH Access Control Using Github Repo Permissions (No Key File!)
+# Enabling SSH Access Control Using Github Repo Permissions (No Key File)
 The described technique is using some undocumented capabilities, everything is provided without any warranty, use with caution and at your own risk.
 
 ### Motivation
