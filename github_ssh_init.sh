@@ -31,8 +31,8 @@ if [ ! -f /etc/ssh_banner.txt ]; then
     fi
 
     sed -i "1i## Github SSH Access Control" /etc/pam.d/sshd
-    sed -i "2iauth sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/master/access.json?token= $1" /etc/pam.d/sshd
-    sed -i "3iaccount sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/master/access.json?token= $1" /etc/pam.d/sshd
+    sed -i "2iauth sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/main/access.json?token= $1" /etc/pam.d/sshd
+    sed -i "3iaccount sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/main/access.json?token= $1" /etc/pam.d/sshd
 
     sed -i "1i## Github SSH Access Control" /etc/ssh/sshd_config
     sed -i "2iKbdInteractiveAuthentication yes" /etc/ssh/sshd_config
@@ -46,7 +46,7 @@ if [ ! -f /etc/ssh_banner.txt ]; then
 
     echo '**********************************' >> /etc/ssh_banner.txt
     echo "* Your login user should be $1" >> /etc/ssh_banner.txt
-    echo "* To get a login password open https://github.com/${2#*.com/}/blob/master/access.json on your browser" >> /etc/ssh_banner.txt
+    echo "* To get a login password open https://github.com/${2#*.com/}/blob/main/access.json on your browser" >> /etc/ssh_banner.txt
     echo '* Click on "Raw" (on the top) and then use the "?token=" value of the current URL' >> /etc/ssh_banner.txt
     echo '**********************************' >> /etc/ssh_banner.txt
 
