@@ -31,8 +31,8 @@ if [ ! -f /etc/ssh_banner.txt ]; then
     fi
 
     sed -i "1i## Github SSH Access Control" /etc/pam.d/sshd
-    sed -i "2iauth sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/main/access.json?token= $1" /etc/pam.d/sshd
-    sed -i "3iaccount sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/main/access.json?token= $1" /etc/pam.d/sshd
+    sed -i "2iauth sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/refs/heads/main/access.json?token= $1" /etc/pam.d/sshd
+    sed -i "3iaccount sufficient pam_oauth2.so https://raw.githubusercontent.com/${2#*.com/}/refs/heads/main/access.json?token= $1" /etc/pam.d/sshd
 
     sed -i "1i## Github SSH Access Control" /etc/ssh/sshd_config
     sed -i "2iKbdInteractiveAuthentication yes" /etc/ssh/sshd_config
